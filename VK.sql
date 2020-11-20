@@ -6,7 +6,7 @@ drop table if exists users;
 create table users (
 	id serial primary key, -- serial = bigint unsigned not null auto_increment unique 
 	firstname varchar(50),
-	lastname varchar(50) comment '������� ������������',
+	lastname varchar(50) comment '������� ������������',
 	email varchar(120) unique,
 	phone varchar(20) unique,
 	birthday date,
@@ -1053,4 +1053,10 @@ INSERT INTO `users_communities` (`user_id`, `community_id`) VALUES ('97', '6');
 INSERT INTO `users_communities` (`user_id`, `community_id`) VALUES ('99', '9');
 INSERT INTO `users_communities` (`user_id`, `community_id`) VALUES ('99', '18');
 INSERT INTO `users_communities` (`user_id`, `community_id`) VALUES ('99', '24');
+
+use snet0611;
+alter table users change column create_at created_at datetime default now(); -- изменяем назание столбца
+
+alter table friend_requests
+alter status set default 'requested'; -- меняем статус по умолчанию requested
 
