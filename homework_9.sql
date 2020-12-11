@@ -5,6 +5,8 @@ start transaction;
 insert into shop.users select * from snet0611.users where id = 93;
 commit;
 
+-- можно добавить в транзакцию команду delete from shop.users where id = 93 limit 1;
+
 -- 2.	Создайте представление, которое выводит название name товарной позиции из таблицы products и соответствующее название каталога name из таблицы catalogs.
 
 DROP view IF EXISTS prod_cat;
