@@ -1,0 +1,3 @@
+nova oao 1000000 250000
+macduck ooo 263000 63000
+burgerking хо 659000 345000
